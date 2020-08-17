@@ -1,9 +1,16 @@
 import React from 'react';
 import { TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native'
 
 import * as Styled from './styles';
 
 const Login = () => {
+    const navigation = useNavigation();
+
+    const handleNavigate = (screen) => {
+        navigation.navigate(screen);
+    }
+
     return (
         <>
             <Styled.Container>
@@ -28,12 +35,12 @@ const Login = () => {
                     />
                 </Styled.FormControl>
 
-                <Styled.ActionButton onPress={() => { }}>
+                <Styled.ActionButton onPress={() => handleNavigate('home')}>
                     <Styled.TextButton>Entrar</Styled.TextButton>
                 </Styled.ActionButton>
 
                 <Styled.Footer>
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={() => handleNavigate('cadastro')}>
                         <Styled.LinkText>Esqueci minha senha</Styled.LinkText>
                     </TouchableOpacity>
                 </Styled.Footer>
