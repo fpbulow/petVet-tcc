@@ -5,7 +5,7 @@ import { getVetSuccess } from './actions';
 
 function* getVeterinarios() {
     try {
-        const response = yield call(api.get, '/todos');
+        const response = yield call(api.get, '/veterinario');
 
         yield put(getVetSuccess(response.data))
     } catch (error) {
