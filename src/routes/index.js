@@ -9,6 +9,7 @@ import CadastroScreen from '../screens/Cadastro';
 import HistoricoScreen from '../screens/HistoricoAtendimento';
 import SolicitacaoScreen from '../screens/SolicitacaoAtendimento';
 
+
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 

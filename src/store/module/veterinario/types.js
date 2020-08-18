@@ -1,0 +1,6 @@
+const Types = {
+    GET_VETERINARIO_REQUEST: 'vet/GET_VETERINARIO_REQUEST',
+    GET_VETERINARIO_SUCCESS: 'vet/GET_VETERINARIO_SUCCESS'
+}
+
+export default Types;
