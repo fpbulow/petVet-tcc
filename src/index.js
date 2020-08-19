@@ -11,7 +11,7 @@ import App from './App';
 const Root = () => {
     return (
         <Provider store={store}>
-            <StatusBar barStyle="light-content" backgroundColor="#1565C0" />
+            <StatusBar barStyle="light-content" backgroundColor="#1FA6D4" />
             <App />
         </Provider>
     )

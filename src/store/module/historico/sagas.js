@@ -5,7 +5,7 @@ import { getHistoricoSuccess } from './actions';
 
 function* getHistoricos() {
     try {
-        const response = yield call(api.get, '/posts');
+        const response = yield call(api.get, '/atendimentos');
 
         yield put(getHistoricoSuccess(response.data))
     } catch (error) {

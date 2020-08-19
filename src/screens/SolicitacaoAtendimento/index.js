@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import avatar from '../../assets/images/profilePic.jpg'
 import * as Styled from './styles';
 import { useNavigation } from '@react-navigation/native'
+import Header from '../../components/Header'
 
 import * as VeterinarioActions from '../../store/module/veterinario/actions'
 
@@ -30,7 +31,7 @@ const SolicitacaoAtendimento = () => {
                 <View style={{ padding: 15, flexDirection: 'row' }}>
                     <View style={{ width: 0, flexGrow: 1, marginLeft: 10 }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Styled.Avatar source={item.avatar} />
+                            <Styled.Avatar source={{ uri: item.avatar }} />
                             <Styled.InfoContainer>
                                 <Styled.Name>
                                     {item.doctor_name}
@@ -60,9 +61,10 @@ const SolicitacaoAtendimento = () => {
 
 
     return (
-
-        <Styled.Container>
-            {/* <ScrollView>
+        <>
+            <Header title="Solicitar Atendimento" />
+            <Styled.Container>
+                {/* <ScrollView>
                 {data?.map(item => (
                     <Styled.Card key={item.id}>
                         <View style={{ padding: 15, flexDirection: 'row' }}>
@@ -95,12 +97,13 @@ const SolicitacaoAtendimento = () => {
                     </Styled.Card>
                 ))}
             </ScrollView> */}
-            <FlatList
-                keyExtractor={item => String(item.id)}
-                data={data}
-                renderItem={({ item }) => _renderItem(item)}
-            />
-        </Styled.Container>
+                <FlatList
+                    keyExtractor={item => String(item.id)}
+                    data={data}
+                    renderItem={({ item }) => _renderItem(item)}
+                />
+            </Styled.Container>
+        </>
     )
 }
 

@@ -31,16 +31,16 @@ const HistoricoAtendimento = () => {
                 <View style={{ padding: 15, flexDirection: 'row' }}>
                     <View style={{ width: 0, flexGrow: 1, marginLeft: 10 }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Styled.Avatar source={avatar} />
+                            <Styled.Avatar source={{ uri: item.avatar }} />
                             <Styled.InfoContainer>
                                 <Styled.Name>
-                                    {item.title}
+                                    {item.doctor_name}
                                 </Styled.Name>
                                 <Styled.Specialization>
-                                    Especialista em cobrar vacilão
+                                    {item.data_atendimento}
                                 </Styled.Specialization>
                                 <Styled.Description numberOfLines={4}>
-                                    {item.body}
+                                    {item.comentarios_atendimento}
                                 </Styled.Description>
                             </Styled.InfoContainer>
                         </View>
