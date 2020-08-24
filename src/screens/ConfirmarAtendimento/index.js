@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { View, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { useDispatch, useSelector } from 'react-redux';
 import * as Styled from './styles';
 import Header from '../../components/Header'
-
 import avatar from '../../assets/images/profilePic2.jpg'
 
-const AcompanharAtendimento = () => {
+const ConfirmarAtendimento = () => {
+
+    const navigation = useNavigation();
+
     return (
         <>
-            <Header title="Acompanhar Atendimento" />
+            <Header title="Confirmar Atendimento" />
             <Styled.Container>
                 <Styled.Card>
                     <View style={{ padding: 15, flexDirection: 'row' }}>
@@ -31,17 +35,19 @@ const AcompanharAtendimento = () => {
                         </View>
                     </View>
                 </Styled.Card>
-
                 <Styled.HorariosContainer>
-                    <Text>Atendimento Start</Text>
-                    <Text>Atendimento End</Text>
+                    <Text>Selecionar Data (Calendario)</Text>
+                    <Text>Selecionar Horário</Text>
                 </Styled.HorariosContainer>
-                <Styled.StatusAtendimento>
-                    <Text>Status do Atendimento</Text>
-                </Styled.StatusAtendimento>
+
+                <Styled.ButtonContainer>
+                    <Styled.BtnConfirmarAtendimento onPress={() => navigation.navigate('acompanharAtendimento')}>
+                        <Styled.txtBtnAtendimento> Confirmar Atendimento </Styled.txtBtnAtendimento>
+                    </Styled.BtnConfirmarAtendimento>
+                </Styled.ButtonContainer>
             </Styled.Container>
         </>
-    );
+    )
 }
 
-export default AcompanharAtendimento;
+export default ConfirmarAtendimento;

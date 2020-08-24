@@ -8,10 +8,14 @@ import PagamentoScreen from '../screens/Pagamento';
 import CadastroScreen from '../screens/Cadastro';
 import HistoricoScreen from '../screens/HistoricoAtendimento';
 import SolicitacaoScreen from '../screens/SolicitacaoAtendimento';
+import AcompanharAtendimentoScreen from '../screens/AcompanharAtendimento';
+import ConfirmarAtendimentoScreen from '../screens/ConfirmarAtendimento';
 
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
+
+
 
 function HomeNavigator() {
     return (
@@ -41,11 +45,21 @@ function SignNavigator() {
     )
 }
 
+function AtendimentoNavigator() {
+    return (
+        <Stack.Navigator headerMode="none" initialRouteName="login">
+            <Stack.Screen name="confirmarAtendimento" component={ConfirmarAtendimentoScreen} />
+            <Stack.Screen name="acompanharAtendimento" component={AcompanharAtendimentoScreen} />
+        </Stack.Navigator>
+    )
+}
+
 export default function RootNavigator() {
     return (
         <Stack.Navigator headerMode="none" initialRouteName="login">
             <Stack.Screen name="login" component={SignNavigator} />
             <Stack.Screen name="home" component={DrawerNavigator} />
+            <Stack.Screen name="atendimento" component={AtendimentoNavigator} />
         </Stack.Navigator>
     )
 }

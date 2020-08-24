@@ -12,11 +12,11 @@ const Home = () => {
 
     return (
         <>
-            <Header title="Main Menu" />
+            <Header title="Menu Principal" />
             <Styled.Container>
                 <Styled.TextContainer>
                     <Styled.Text>
-                        Seja Bem-Vindo,  {'\n'}
+                        Seja Bem-Vindo, {`{item.name}`} {'\n'}
                         <Styled.TextBold>
                             Selecione uma Opção
                     </Styled.TextBold>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, ScrollView, FlatList } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux';
-import avatar from '../../assets/images/profilePic2.jpg'
 import * as Styled from './styles';
 import { useNavigation } from '@react-navigation/native'
 

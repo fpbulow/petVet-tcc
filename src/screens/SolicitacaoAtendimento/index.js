@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { View, ScrollView, FlatList } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux';
-import avatar from '../../assets/images/profilePic.jpg'
-import * as Styled from './styles';
 import { useNavigation } from '@react-navigation/native'
+import * as Styled from './styles';
 import Header from '../../components/Header'
 
 import * as VeterinarioActions from '../../store/module/veterinario/actions'
@@ -48,10 +47,10 @@ const SolicitacaoAtendimento = () => {
                     </View>
                 </View>
                 <Styled.ButtonContainer>
-                    <Styled.ButtonPerfil>
+                    <Styled.ButtonPerfil onPress={() => navigation.navigate('')}>
                         <Styled.TextButtonPerfil>Ver Perfil</Styled.TextButtonPerfil>
                     </Styled.ButtonPerfil>
-                    <Styled.ButtonAtendimento>
+                    <Styled.ButtonAtendimento onPress={() => navigation.navigate('atendimento')}>
                         <Styled.TextButtonAtendimento>Atendimento</Styled.TextButtonAtendimento>
                     </Styled.ButtonAtendimento>
                 </Styled.ButtonContainer>

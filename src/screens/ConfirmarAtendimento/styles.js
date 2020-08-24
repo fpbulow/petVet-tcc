@@ -67,5 +67,3 @@ export const txtBtnAtendimento = styled.Text`
 `;
 
 export const HorariosContainer = styled.View``;
-
-export const StatusAtendimento = styled.View``;
