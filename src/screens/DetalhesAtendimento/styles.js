@@ -9,7 +9,6 @@ export const Container = styled(LinearGradient).attrs({
     flex: 1;
 `;
 
-
 export const Card = styled.View`
     border-radius: 5px;
     background-color: #ffffff;
@@ -42,25 +41,12 @@ export const Description = styled.Text`
     font-size: 12px;
 `;
 
-export const ButtonContainer = styled.View`    
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 20px;
+export const DetalhesContainer = styled.View`
+
 `;
 
-export const BtnConfirmarAtendimento = styled.TouchableOpacity`
-    padding: 10px;
-    border-width: 1px;
-    border-color: #1FA6D4;
-    width: 100%;
-    border-radius: 5px ;    
-    align-items: center; 
-    
-`;
+export const DataHoraAtendimento = styled.Text``;
 
-export const txtBtnAtendimento = styled.Text`
-    color: #1FA6D4;
-`;
+export const ValorAtendimento = styled.Text``;
 
-export const HorariosContainer = styled.View``;
+export const Text = styled.Text``;

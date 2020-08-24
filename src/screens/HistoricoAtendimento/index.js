@@ -9,6 +9,7 @@ import * as HistoricoActions from '../../store/module/historico/actions'
 
 const HistoricoAtendimento = () => {
 
+    const navigation = useNavigation();
 
     const dispatch = useDispatch();
 
@@ -46,7 +47,7 @@ const HistoricoAtendimento = () => {
                     </View>
                 </View>
                 <Styled.ButtonContainer>
-                    <Styled.ButtonPerfil>
+                    <Styled.ButtonPerfil onPress={() => navigation.navigate('detalhesAtendimento')} >
                         <Styled.TextButtonPerfil>Visualizar Atendimento </Styled.TextButtonPerfil>
                     </Styled.ButtonPerfil>
                 </Styled.ButtonContainer>
