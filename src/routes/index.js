@@ -11,6 +11,7 @@ import SolicitacaoScreen from '../screens/SolicitacaoAtendimento';
 import AcompanharAtendimentoScreen from '../screens/AcompanharAtendimento';
 import ConfirmarAtendimentoScreen from '../screens/ConfirmarAtendimento';
 import DetalhesAtendimentoScreen from '../screens/DetalhesAtendimento';
+import DrawerScreen from '../components/Drawer'
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -20,17 +21,18 @@ function HomeNavigator() {
         <Stack.Navigator headerMode="none" initialRouteName="login">
             <Stack.Screen name="home" component={HomeScreen} />
             <Stack.Screen name="solicitacao" component={SolicitacaoScreen} />
+            <Stack.Screen name="confirmarAtendimento" component={ConfirmarAtendimentoScreen} />
         </Stack.Navigator>
     )
 }
 
 function DrawerNavigator() {
     return (
-        <Drawer.Navigator>
-            <Drawer.Screen name="home" component={HomeNavigator} />
-            <Drawer.Screen name="pagamento" component={PagamentoScreen} />
-            <Drawer.Screen name="historicoAtendimento" component={HistoricoScreen} />
-            <Drawer.Screen name="acompanharAtendimento" component={AcompanharAtendimentoScreen} />
+        <Drawer.Navigator drawerContent={DrawerScreen}>
+            <Drawer.Screen name="home" component={HomeNavigator} options={{ drawerLabel: 'Home' }} />
+            <Drawer.Screen name="pagamento" component={PagamentoScreen} options={{ drawerLabel: 'Pagamento' }} />
+            <Drawer.Screen name="historicoAtendimento" component={HistoricoScreen} options={{ drawerLabel: 'Historico de Atendimento' }} />
+            <Drawer.Screen name="acompanharAtendimento" component={AcompanharAtendimentoScreen} options={{ drawerLabel: 'Acompanhar Atendimento' }} />
         </Drawer.Navigator>
     )
 }
@@ -40,14 +42,6 @@ function SignNavigator() {
         <Stack.Navigator headerMode="none" initialRouteName="login">
             <Stack.Screen name="login" component={LoginScreen} />
             <Stack.Screen name="cadastro" component={CadastroScreen} />
-        </Stack.Navigator>
-    )
-}
-
-function AtendimentoNavigator() {
-    return (
-        <Stack.Navigator headerMode="none" initialRouteName="login">
-            <Stack.Screen name="confirmarAtendimento" component={ConfirmarAtendimentoScreen} />
         </Stack.Navigator>
     )
 }
@@ -65,7 +59,6 @@ export default function RootNavigator() {
         <Stack.Navigator headerMode="none" initialRouteName="login">
             <Stack.Screen name="login" component={SignNavigator} />
             <Stack.Screen name="home" component={DrawerNavigator} />
-            <Stack.Screen name="atendimento" component={AtendimentoNavigator} />
             <Stack.Screen name="detalhesAtendimento" component={DetalhesAtendimentoNavigator} />
         </Stack.Navigator>
     )

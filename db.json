@@ -54,5 +54,11 @@
             "doctor_name": "Miranha ",
             "specialization": "Especialista em Pássarps"
         }
-    ]
+    ],
+    "perfil": {
+        "id": 1,
+        "nome": "Nome do idiota",
+        "avatar": "https://imgur.com/5coUxUv.jpg",
+        "rating": 4.5
+    }
 }

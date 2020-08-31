@@ -15,7 +15,7 @@ const Home = () => {
             <Styled.Container>
                 <Styled.TextContainer>
                     <Styled.Text>
-                        Seja Bem-Vindo, {`{item.name}`} {'\n'}
+                        Seja Bem-Vindo {`{user.name}`}, {'\n'}
                         <Styled.TextBold>
                             Selecione uma Opção
                     </Styled.TextBold>
@@ -26,7 +26,7 @@ const Home = () => {
                 </Styled.ActionButton>
 
                 <Styled.ActionButton onPress={() => navigation.navigate('historicoAtendimento')}>
-                    <Styled.TextButton>Histórico de Atendimento</Styled.TextButton>
+                    <Styled.TextButton>Histórico de Atendimentos</Styled.TextButton>
                 </Styled.ActionButton>
             </Styled.Container>
         </>

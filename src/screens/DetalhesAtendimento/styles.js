@@ -41,12 +41,28 @@ export const Description = styled.Text`
     font-size: 12px;
 `;
 
-export const DetalhesContainer = styled.View`
-
+export const ContainerDetalhesExterno = styled.View`    
+    background-color: #fff;
+    margin: 10px;
+    padding: 5px;        
 `;
 
-export const DataHoraAtendimento = styled.Text``;
+export const DetalhesContainer = styled.View`
+    border-radius: 5px;
+    background-color: #FFF;
+    margin: 10px;
+    padding: 6px;
+    elevation: 5;        
+`;
 
-export const ValorAtendimento = styled.Text``;
+export const DataHoraAtendimento = styled.Text`
+    margin-left: 10px;
+`;
 
-export const Text = styled.Text``;
+export const DetailsText = styled.Text`
+    margin-left: 5px;
+`;
+
+export const Text = styled.Text`
+    margin: 0 10px;
+`;

@@ -42,6 +42,16 @@ export const Description = styled.Text`
     font-size: 12px;
 `;
 
+export const ButtonData = styled.TouchableOpacity`
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #1FA6D4;
+    elevation: 5;
+    width: 50%;
+    align-items: center;    
+`;
+
 export const ButtonContainer = styled.View`    
     flex-direction: row;
     justify-content: center;
@@ -50,17 +60,29 @@ export const ButtonContainer = styled.View`
 `;
 
 export const BtnConfirmarAtendimento = styled.TouchableOpacity`
-    padding: 10px;
-    border-width: 1px;
-    border-color: #1FA6D4;
-    width: 100%;
-    border-radius: 5px ;    
-    align-items: center; 
-    
+    padding: 10px;   
+    border-radius: 5px;
+    background-color: #1FA6D4;
+    elevation: 5;
+    width: 90%;
+    align-items: center;    
 `;
 
 export const txtBtnAtendimento = styled.Text`
-    color: #1FA6D4;
+    color: #FFF;
 `;
 
-export const HorariosContainer = styled.View``;
+export const DetalhesAtendimento = styled.View`    
+    padding: 10px;    
+    align-items: center;
+`;
+
+export const TextInput = styled.TextInput`
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #1FA6D4;
+    margin-top: 5px;
+    width: 80%;
+    color: #000;
+    font-size: 13px;
+`;

@@ -55,7 +55,6 @@ const HistoricoAtendimento = () => {
         )
     }
 
-
     return (
 
         <Styled.Container>
