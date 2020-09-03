@@ -11,6 +11,7 @@ import SolicitacaoScreen from '../screens/SolicitacaoAtendimento';
 import AcompanharAtendimentoScreen from '../screens/AcompanharAtendimento';
 import ConfirmarAtendimentoScreen from '../screens/ConfirmarAtendimento';
 import DetalhesAtendimentoScreen from '../screens/DetalhesAtendimento';
+import DoctorProfileScreen from '../screens/DoctorProfile';
 import DrawerScreen from '../components/Drawer'
 
 const Stack = createStackNavigator();
@@ -22,6 +23,7 @@ function HomeNavigator() {
             <Stack.Screen name="home" component={HomeScreen} />
             <Stack.Screen name="solicitacao" component={SolicitacaoScreen} />
             <Stack.Screen name="confirmarAtendimento" component={ConfirmarAtendimentoScreen} />
+            <Stack.Screen name="docProfile" component={DoctorProfileScreen} />
         </Stack.Navigator>
     )
 }

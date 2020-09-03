@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigation, useRoute } from '@react-navigation/native';
 import * as Styled from './styles';
 import Header from '../../components/Header'
-import avatar from '../../assets/images/profilePic2.jpg'
+import avatar from '../../assets/images/profilePic.jpg'
 import DateTimePicker from '@react-native-community/datetimepicker';
 
 
@@ -13,7 +13,7 @@ const ConfirmarAtendimento = () => {
     const navigation = useNavigation();
     const route = useRoute();
 
-    const [date, setDate] = useState(new Date(1598051730000));
+    const [date, setDate] = useState(new Date());
     const [mode, setMode] = useState('date');
     const [show, setShow] = useState(false);
 
@@ -30,33 +30,45 @@ const ConfirmarAtendimento = () => {
         showMode('time');
     };
 
+    // {route.params.docID} - recebendo o dado de outra rota
+
     return (
-        <>
+        <Styled.Container>
             <Header title="Confirmar Atendimento" />
-            <Styled.Container>
-                <Styled.Card >
-                    <View style={{ padding: 15, flexDirection: 'row' }}>
-                        <View style={{ width: 0, flexGrow: 1, marginLeft: 10 }}>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Styled.Avatar source={avatar} />
-                                <Styled.InfoContainer>
-                                    <Styled.Name>
-                                        {route.params.docID}
+            <Styled.Avatar source={avatar} />
+            <Styled.Detail />
+            <Styled.ViewDetailTitle>
+                <Styled.Name>
+                    Fernando Pianaro Bulow
+                </Styled.Name>
+            </Styled.ViewDetailTitle>
+            <Styled.Content>
+
+            </Styled.Content>
+            {/* <Styled.Card >
+                <View style={{ padding: 15, flexDirection: 'row' }}>
+                    <View style={{ width: 0, flexGrow: 1, marginLeft: 10 }}>
+                        <View style={{ flexDirection: 'row' }}>
+                            <Styled.Avatar source={avatar} />
+                            <Styled.InfoContainer>
+                                <Styled.Name>
+                                    Nome Doctor
                                     </Styled.Name>
-                                    <Styled.Specialization>
-                                        specializacao
+                                <Styled.Specialization>
+                                    specializacao
                                     </Styled.Specialization>
-                                    <Styled.Description numberOfLines={4}>
-                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                        Why do we use it?
+                                <Styled.Description numberOfLines={4}>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                    Why do we use it?
                                     </Styled.Description>
-                                </Styled.InfoContainer>
-                            </View>
+                            </Styled.InfoContainer>
                         </View>
                     </View>
-                </Styled.Card>
-                <Styled.DetalhesAtendimento>
+                </View>
+            </Styled.Card>
+            <Styled.DetalhesAtendimento>
 
+                <Styled.ButtonDateTimeContainer>
                     <Styled.ButtonData onPress={showDatePicker}>
                         <Styled.txtBtnAtendimento>Selecionar Data</Styled.txtBtnAtendimento>
                     </Styled.ButtonData>
@@ -64,30 +76,30 @@ const ConfirmarAtendimento = () => {
                     <Styled.ButtonData onPress={showTimePicker}>
                         <Styled.txtBtnAtendimento>Selecionar Horario</Styled.txtBtnAtendimento>
                     </Styled.ButtonData>
+                </Styled.ButtonDateTimeContainer>
 
 
-                    {show && (
-                        <DateTimePicker
-                            testID="dateTimePicker"
-                            value={date}
-                            mode={mode}
-                            is24Hour={true}
-                            display="default"
-                        />
-                    )}
-
-                    <Styled.TextInput
-                        numberOfLines={6}
-                        placeholder="Informações Adicionais"
+                {show && (
+                    <DateTimePicker
+                        testID="dateTimePicker"
+                        value={date}
+                        mode={mode}
+                        is24Hour={true}
+                        display="default"
                     />
-                </Styled.DetalhesAtendimento>
-                <Styled.ButtonContainer>
-                    <Styled.BtnConfirmarAtendimento onPress={() => navigation.navigate('acompanharAtendimento')}>
-                        <Styled.txtBtnAtendimento> Confirmar Atendimento </Styled.txtBtnAtendimento>
-                    </Styled.BtnConfirmarAtendimento>
-                </Styled.ButtonContainer>
-            </Styled.Container >
-        </>
+                )}
+
+                <Styled.TextInput
+                    numberOfLines={6}
+                    placeholder="Informações Adicionais"
+                />
+            </Styled.DetalhesAtendimento>
+            <Styled.ButtonContainer>
+                <Styled.BtnConfirmarAtendimento onPress={() => navigation.navigate('acompanharAtendimento')}>
+                    <Styled.txtBtnAtendimento> Confirmar Atendimento </Styled.txtBtnAtendimento>
+                </Styled.BtnConfirmarAtendimento>
+            </Styled.ButtonContainer> */}
+        </Styled.Container >
     )
 }
 

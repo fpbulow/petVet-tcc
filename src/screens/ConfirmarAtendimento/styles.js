@@ -1,27 +1,46 @@
 import styled from 'styled-components/native';
 import LinearGradient from 'react-native-linear-gradient'
 
-export const Container = styled(LinearGradient).attrs({
-    colors: ['white', 'white'],
-    start: { x: 0, y: 0 },
-    end: { x: 0, y: 1 }
-})`
+export const Container = styled.View`
     flex: 1;
 `;
 
+export const Content = styled.View`
+    padding: 20px;
+`;
 
 export const Card = styled.View`
     border-radius: 5px;
     background-color: #ffffff;
     margin: 10px;
-    elevation: 5;
 `;
 
 export const Avatar = styled.Image`
-    width: 86px;
-    height: 86px;
-    margin-right: 20px; 
-    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    margin-right: 20px;
+`;
+
+export const Detail = styled(LinearGradient).attrs({
+    colors: ['rgba(0, 0, 0, 0.1)', 'transparent', 'rgba(0, 0, 0, 0.9)'],
+    start: { x: 0, y: 0 },
+    end: { x: 0, y: 1 }
+})`
+    position: absolute;
+    top: 55;
+    left: 0;
+    width: 100%;
+    height: 200px;
+`
+
+export const ViewDetailTitle = styled.View`
+    top: 200px;
+    bottom: 0; 
+    left: 0; 
+    right: 10px; 
+    position: absolute; 
+    flex: 1; 
+    padding: 20px;
 `;
 
 export const InfoContainer = styled.View`
@@ -29,8 +48,9 @@ export const InfoContainer = styled.View`
 `;
 
 export const Name = styled.Text`
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
+    color: #ffffff;
 `;
 
 export const Specialization = styled.Text`
@@ -42,14 +62,19 @@ export const Description = styled.Text`
     font-size: 12px;
 `;
 
+export const ButtonDateTimeContainer = styled.View`
+    flex-direction: row;
+    padding: 10px;
+`;
+
 export const ButtonData = styled.TouchableOpacity`
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
     background-color: #1FA6D4;
-    elevation: 5;
-    width: 50%;
-    align-items: center;    
+    elevation: 5;    
+    align-items: center;
+    margin-right: 5px;
 `;
 
 export const ButtonContainer = styled.View`    

@@ -52,7 +52,7 @@ const SolicitacaoAtendimento = () => {
                     </View>
                 </View>
                 <Styled.ButtonContainer>
-                    <Styled.ButtonPerfil onPress={() => navigation.navigate('')}>
+                    <Styled.ButtonPerfil onPress={() => navigation.navigate('docProfile')}>
                         <Styled.TextButtonPerfil>Ver Perfil</Styled.TextButtonPerfil>
                     </Styled.ButtonPerfil>
                     <Styled.ButtonAtendimento
